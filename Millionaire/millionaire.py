@@ -15,16 +15,26 @@ questions = [
     ["What is the capital of Australia?", "A) Sydney", "B) Melbourne", "C) Canberra", "D) Perth", "C"]
 ]
 
+prize = [1000, 2000, 3000, 5000, 10000, 20000, 40000, 80000, 160000, 320000, 640000, 1250000, 2500000, 5000000]
+
+i = 0  
 for question in questions:
+
     print(question[0])
     print(f" {question[1]}")
     print(f" {question[2]}")
     print(f" {question[3]}")
     print(f" {question[4]}")
 
-    a = input("Enter your answer: ")
-    if (question [5]==a):
+    a = input("Enter your answer: ").upper()  # Convert input to uppercase
+    if (question[5].upper() == a):  # Compare both in uppercase
+
         print("Correct answer")
+        print("You have won: ", prize[i], "dollars")
+        i+=1
+
     else : 
         print ("Incorrect")
         
+    
+    
